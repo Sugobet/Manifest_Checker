@@ -1,22 +1,33 @@
 # Manifest_Checker
 
+## Static Analysis
+
 基于pyaxmlparser，APK的AndroidManifest.xml快速检查脚本，用于快速检查Manifest中的信息
 
-Based on pyaxmlparser, this script quickly checks the AndroidManifest.xml of an APK. It is used to quickly check the information in the manifest.
-
-1. APK签名信息  APK signature information
-2. 证书信息  Certificate information
-3. 应用权限  App permissions
-4. 可导出及不安全的组件  Exportable and unsafe components
-5. 检查resources.arsc中的url和ip  Check the URLs and IP addresses in resources.arsc
+1. APK签名信息
+2. 证书信息
+3. 应用权限
+4. 可导出及不安全的组件
+5. 检查resources.arsc中的url和ip
 
 另外调用了ApkCheckPack，用于快速检查加壳、反调试、root、虚拟机等
 
-ApkCheckPack is also used to quickly check for packers, anti-debugging, rooting, virtual machines, etc.
+## Dynamic Analysis
+
+通过自动调用panda-dex-dumper（或frida-dexdump）、d2j-dex2jar、jadx，获得java源码并分析：
+
+1. 本地sql注入
+2. root检测
+3. 虚拟机检测
+4. 反调试检测
 
 ## Run
 
   1. pip3 install pyaxmlparser
-  2. 自行从 [ApkCheckPack](https://github.com/moyuwa/ApkCheckPack) 下载ApkCheckPack并放到main.py同级目录      Download ApkCheckPack from [ApkCheckPack](https://github.com/moyuwa/ApkCheckPack) and place it in the same directory as main.py.
+  2. 自行从 [ApkCheckPack](https://github.com/moyuwa/ApkCheckPack) `下载适合自己电脑系统架构`的ApkCheckPack并放到main.py同级目录
 
-Run: `python3 ./main.py <apk path>`
+运行: `python3 ./main.py <apk path> <adb device id>`
+
+ps1: 运行adb devices查看id
+
+ps2: 运行脚本时不提供adb device id则只会进行静态分析，不会做动态分析
