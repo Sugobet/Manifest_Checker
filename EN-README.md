@@ -25,6 +25,7 @@ This script automatically calls panda-dex-dumper (or frida-dexdump), d2j-dex2jar
 
 1. pip3 install pyaxmlparser
 2. Install the package manually from [ApkCheckPack](https://github.com/moyuwa/ApkCheckPack) `Download the ApkCheckPack package that matches your computer's system architecture` and place it in the same directory as main.py.
+3. If dynamic analysis is required, you need to manually open the target APP from the Android virtual machine
 
 Run: `python3 ./main.py <apk path> <adb device id>`
 
