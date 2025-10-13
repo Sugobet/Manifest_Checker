@@ -1,5 +1,7 @@
 # Manifest_Checker
 
+[EN-README](./EN-README.md)
+
 ## Static Analysis
 
 基于pyaxmlparser，APK的AndroidManifest.xml快速检查脚本，用于快速检查Manifest中的信息
