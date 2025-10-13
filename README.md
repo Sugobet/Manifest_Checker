@@ -27,6 +27,7 @@
 
   1. pip3 install pyaxmlparser
   2. 自行从 [ApkCheckPack](https://github.com/moyuwa/ApkCheckPack) `下载适合自己电脑系统架构`的ApkCheckPack并放到main.py同级目录
+  3. 若需要动态分析，则需要手动从安卓虚拟机打开目标APP
 
 运行: `python3 ./main.py <apk path> <adb device id>`
 
