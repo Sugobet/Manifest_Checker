@@ -11,6 +11,7 @@
 3. 应用权限
 4. 可导出及不安全的组件
 5. 检查resources.arsc中的url和ip
+6. SharePreference检查
 
 <img width="1092" height="1568" alt="image" src="https://github.com/user-attachments/assets/b9827e29-dd88-4abe-ae19-f8f5d46f90c2" />
 
@@ -25,6 +26,7 @@
 2. root检测
 3. 虚拟机检测
 4. 反调试检测
+5. Appsecret｜Appid
 
 <img width="3022" height="744" alt="image" src="https://github.com/user-attachments/assets/5490b82b-e533-49b1-ac47-0df202d7b928" />
 
