@@ -336,5 +336,11 @@ if __name__ == "__main__":
         print_header("Anti-Debugging Detection:")
         os.system("grep -iE 'checkFridaRunningProcesses|checkRunningProcesses|checkRunningServices|treadCpuTimeNanos|TamperingWithJavaRuntime|com.android.internal.os.ZygoteInit|com.saurik.substrate.MS$2|de.robv.android.xposed.XposedBridge|detectBypassSSL|Landroid/os/Debug;->isDebuggerConnected()Z|:27042|:23946|frida-gadget|libfrida.so|XposedBridge.jar|EdXposed|frida-server|android_server|gdbserver|ro.debuggable|service.adb.root|XposedInstaller|Magisk|LSPosed|ptrace|/proc/self/status|libsubstrate.so|com.saurik.substrate|sslunpinning|JustTrustMe|/data/data/de.robv.android.xposed.installer/conf/modules.list' -R ./classes/sources")
 
+        print_header("SharePreference cat:")
+        os.system(f'adb -s {args.s} shell "cat /data/data/{axml_obj.get('package')}/shared_prefs/*.xml"')
+
+        print_header("AppSecret Discovery:")
+        os.system("grep -iE 'appsecret|appid' -R ./classes/sources")
+
     except:
         pass
